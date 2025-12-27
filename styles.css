@@ -1,0 +1,303 @@
+/* Global Styles */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background-color: #000000;
+  background-image: url('images/seek26_background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #000000;
+}
+
+/* Headings */
+h1 {
+  font-family: "moret", sans-serif;
+  font-size: 10vh;
+  text-align: center;
+  margin: .75vh 0 .25vh;
+}
+
+main h1{
+  margin: .25rem;
+  margin: 2.96vh 2.96vh 4vh;
+}
+
+
+h2 {
+  font-family: "moret", sans-serif;
+  font-size: 2.5vh;
+  line-height: 1;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+main h2 {
+  font-size: 4.35vh;
+}
+
+h3 {
+  font-family: "acumin-pro-wide", sans-serif;
+  font-size: 3.5vh;
+  margin: .75vh 0 -0.5rem;
+  text-align: center;
+}
+
+/* Paragraph */
+p {
+  font-family: "acumin-pro-wide", sans-serif;
+  font-size: 1.15vh;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+p.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main p {
+  font-size: 2.1vh;
+  line-height:1.25;
+}
+
+/* Column Styles */
+.col-lg-8, .col-md-10 {
+  max-width: 624px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .col-lg-8, .col-md-10 {
+      padding-bottom: 3vh;
+  }
+}
+
+/* Session Styles */
+.session {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.col .session{
+  max-width:95%;
+}
+
+main .session {
+  margin-bottom: 7.35vh;
+  margin-top: 0;
+}
+
+.session img {
+  border-radius: 50%;
+  border: 2.66px solid #000;
+  margin: auto;
+  display: block;
+}
+
+.session_info {
+  max-width: 600px;
+}
+
+
+
+/* Session Full Styles */
+.session_full {
+  position: absolute;
+  z-index: 1;
+  background-color: #ED1C27;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "moret", sans-serif;
+  border-radius: 3px;
+}
+
+main .session_full {
+  top: 0px;
+  right: 12px;
+  width: 9vh;
+  height: 5.6vh;
+  font-size: 3.1vh;
+}
+
+.col-10 .session_full {
+  top: -20px;
+  left: 93%;
+  width: 35px;
+  height: 20px;
+  font-size: 16px;
+  border-radius:0;
+  border:1px solid #ED1C27;
+  position: relative;
+  margin-bottom:-20px;
+}
+
+.session_info.full {
+  color: #292929;
+}
+
+.session_info.full p,
+.session_info.full h2 {
+  opacity: 0.6;
+}
+
+#current-session .session_full {
+  display: none;
+  width: 100vw;
+  height: 13.2vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10vh;
+}
+
+/* Progress Bar Styles */
+.progress {
+  margin: 0.25rem 0 0 0.5rem;
+  height: 22px;
+  overflow: visible;
+  border-radius: 0;
+  background-color: rgba(243, 241, 236, 0.5);
+  border: 1px solid #000000;
+}
+
+main .progress {
+  margin: 0.5rem 0 0 0.5rem;
+  height: 30px;
+  max-width: 600px;
+}
+
+main .progress-bar {
+  height: 28px;
+}
+
+.progress-bar {
+  background-color: #000000;
+  height: 20px;
+}
+
+#current-session .progress {
+  margin: 0;
+  height: 30px;
+  max-width: 100%;
+}
+
+#current-session .progress-bar {
+  height: 28px;
+}
+
+/* Footer Styles */
+#key {
+  width: 100%;
+  max-width: 600px;
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#key .progress {
+  height: 20px;
+  margin-bottom: 0.5rem;
+}
+
+#key .progress-bar {
+  width: 30%;
+  height: 18px;
+}
+
+.labels {
+  font-family: "moret", sans-serif;
+  font-size: 2.23vh;
+  width: 100%;
+  max-width: 590px;
+  margin: 0 0.5rem;
+}
+
+.labels span:nth-of-type(2) {
+  float: right;
+}
+
+
+.footer {
+  width: 13vh;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+/* Current Session Styles */
+#current-session {
+  padding: 1vh 25px;
+}
+
+#current-session .labels {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Additional Session Positioning */
+
+#additional-sessions {
+  min-height: calc(100vh - 17.2vh); 
+  display: flex;
+  flex-direction: column;
+}
+
+#additional-sessions > .row:first-of-type {
+  margin-top: auto;
+  margin-bottom: 0; 
+}
+
+#additional-sessions > .row:nth-of-type(2) {
+  margin-top: 1rem; 
+  margin-bottom: auto; 
+}
+
+
+/* Media Queries */
+
+@media (min-width: 767px) {
+  main {
+      flex-grow: 1;
+      height: calc(100vh - 13vh);
+      overflow-x: hidden;
+      box-sizing: border-box; 
+      margin-bottom: 13vh;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Adjust font sizes and layout for smaller screens */
+  h1 {
+      font-size: 3rem;
+  }
+  h2 {
+      font-size: 3.5vh;
+  }
+  p {
+      font-size: 1.75vh;
+  }
+  .session_full {
+      width: 70px;
+      height: 40px;
+      font-size: 1.5rem;
+  }
+  .progress {
+      height: 20px;
+  }
+  .progress-bar {
+      height: 18px;
+  }
+  #key, .footer {
+      display: none;
+  }
+}
